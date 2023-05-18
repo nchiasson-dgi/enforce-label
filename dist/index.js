@@ -9657,6 +9657,7 @@ function run() {
         try {
             const labels = github.context.payload.pull_request.labels;
             const required_labels = (core.getInput('required_labels', { required: true }) !== '') ? (core.getInput('required_labels', { required: false })).split(',') : [];
+            console.log(`PR Labels: ${JSON.stringify(labels)}`);
             // Check we have at least one of the required labels set.
             if (required_labels.length > 0 &&
                 !required_labels.some(requiredLabel => labels.find((l) => l.name === requiredLabel))) {
