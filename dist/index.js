@@ -9664,7 +9664,7 @@ function run() {
             }
             // Check to make sure we don't have more than one of the required labels set.
             if (required_labels.length > 0 &&
-                !((labels.filter((label) => required_labels.find((l) => l === label.name))).length > 1)) {
+                (labels.filter((label) => required_labels.find((l) => l === label.name))).length > 1) {
                 core.setFailed(`Please set ONLY ONE of the following labels: ${required_labels}`);
             }
         }
