@@ -1,0 +1,12 @@
+name: 'Enforce Label'
+description: 'Bump the major version reference tag for the action.'
+inputs:
+  required_labels:
+    description: 'A list of labels that at least one is required on the pull request.'
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  icon: 'tag'
+  color: 'purple'

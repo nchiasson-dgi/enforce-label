@@ -1,0 +1,20 @@
+{
+  "name": "enforce-label",
+  "version": "1.0.0",
+  "description": "Action for enforcing labels on a pull-request.",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "eslint src/index.ts",
+    "build": "tsc"
+  },
+  "author": "discoverygarden",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "typescript": "^5.0.4"
+  }
+}
